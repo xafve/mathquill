@@ -140,10 +140,17 @@ var saneKeyboardEvents = (function() {
     // This will always return false in IE < 9, which don't support
     // HTMLTextareaElement::selection{Start,End}.
     function hasSelection() {
+      // If you select something, then execute an API command on iOS, e.g. \frac, then
+      // type, you always have a selection, so keyboard input goes missing if this
+      // function is used  I didn't find a way to clear the selection, so I'm forcing
+      // this to false
+      return false;
+/*
       var dom = textarea[0];
 
       if (!('selectionStart' in dom)) return false;
       return dom.selectionStart !== dom.selectionEnd;
+*/
     }
 
     function handleKey() {
