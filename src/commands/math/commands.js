@@ -465,6 +465,8 @@ LatexCmds.fraction = P(MathCommand, function(_, super_) {
   };
 });
 
+// disabling LiveFraction: it prevents the use of a /
+/*
 var LiveFraction =
 LatexCmds.over =
 CharCmds['/'] = P(Fraction, function(_, super_) {
@@ -495,6 +497,7 @@ CharCmds['/'] = P(Fraction, function(_, super_) {
     super_.createLeftOf.call(this, cursor);
   };
 });
+*/
 
 var SquareRoot =
 LatexCmds.sqrt =
@@ -752,7 +755,8 @@ function bindCharBracketPair(open, ctrlSeq) {
   CharCmds[close] = bind(Bracket, R, open, close, ctrlSeq, end);
 }
 bindCharBracketPair('(');
-bindCharBracketPair('[');
+// disabling binding of []: it prevents writing open interval definitions, e.g [-5, 5[
+//bindCharBracketPair('[');
 bindCharBracketPair('{', '\\{');
 LatexCmds.langle = bind(Bracket, L, '&lang;', '&rang;', '\\langle ', '\\rangle ');
 LatexCmds.rangle = bind(Bracket, R, '&lang;', '&rang;', '\\langle ', '\\rangle ');
