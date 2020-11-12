@@ -465,11 +465,11 @@ LatexCmds.fraction = P(MathCommand, function(_, super_) {
   };
 });
 
-// disabling LiveFraction: it prevents the use of a /
-/*
 var LiveFraction =
-LatexCmds.over =
-CharCmds['/'] = P(Fraction, function(_, super_) {
+LatexCmds.over
+// disabling LiveFraction: it prevents the use of a /
+// = CharCmds['/'] 
+= P(Fraction, function(_, super_) {
   _.createLeftOf = function(cursor) {
     if (!this.replacedFragment) {
       var leftward = cursor[L];
@@ -497,7 +497,6 @@ CharCmds['/'] = P(Fraction, function(_, super_) {
     super_.createLeftOf.call(this, cursor);
   };
 });
-*/
 
 var SquareRoot =
 LatexCmds.sqrt =
