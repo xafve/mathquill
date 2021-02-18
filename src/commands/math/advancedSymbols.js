@@ -312,6 +312,13 @@ LatexCmds.iff = bind(BinaryOperator,'\\Leftrightarrow ','&hArr;');
 LatexCmds.hArr = LatexCmds.lrArr = LatexCmds.Leftrightarrow =
   bind(VanillaSymbol,'\\Leftrightarrow ','&hArr;');
 
+
+// Adding support for nLeftArrow, nRightArrow and nLeftrightarrow
+LatexCmds.nLeftarrow = bind(VanillaSymbol,'\\nLeftarrow ','&nLeftarrow;');
+LatexCmds.nRightarrow = bind(VanillaSymbol,'\\nRightarrow ','&nRightarrow;');
+LatexCmds.nLeftrightarrow =
+  bind(VanillaSymbol,'\\nLeftrightarrow ','&nLeftrightarrow;');
+
 LatexCmds.Re = LatexCmds.Real = LatexCmds.real = bind(VanillaSymbol,'\\Re ','&real;');
 
 LatexCmds.Im = LatexCmds.imag =

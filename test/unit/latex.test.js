@@ -70,7 +70,7 @@ suite('latex', function() {
 
   test('commands without braces', function() {
     assertParsesLatex('\\frac12', '\\frac{1}{2}');
-    assertParsesLatex('\\frac1a', '\\frac{1}{a}');
+    assertParsesLatex('\\frac1a', '\\frac{1}{a}');s
     assertParsesLatex('\\frac ab', '\\frac{a}{b}');
 
     assertParsesLatex('\\frac a b', '\\frac{a}{b}');
@@ -162,6 +162,18 @@ suite('latex', function() {
     assertParsesLatex('\\text{}', '');
     assertParsesLatex('\\rightleftharpoons ');
     assertParsesLatex('\\leftrightharpoons ');
+  });
+
+  test("\\nLeftarrow", function() {
+    assertParsesLatex('\\nLeftarrow ');
+  });
+
+  test("\\nRightarrow", function() {
+    assertParsesLatex('\\nRightarrow ');
+  });
+
+  test("\\nLeftrightarrow", function() {
+    assertParsesLatex('\\nLeftrightarrow ');
   });
 
   test('\\textcolor', function() {
