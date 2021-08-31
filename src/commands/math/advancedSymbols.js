@@ -319,6 +319,9 @@ LatexCmds.nRightarrow = bind(VanillaSymbol,'\\nRightarrow ','&nRightarrow;');
 LatexCmds.nLeftrightarrow =
   bind(VanillaSymbol,'\\nLeftrightarrow ','&nLeftrightarrow;');
 
+// Adding support for nmid
+LatexCmds.nmid = bind(VanillaSymbol,'\\nmid ','&#8740;');
+
 LatexCmds.Re = LatexCmds.Real = LatexCmds.real = bind(VanillaSymbol,'\\Re ','&real;');
 
 LatexCmds.Im = LatexCmds.imag =

@@ -176,6 +176,10 @@ suite('latex', function() {
     assertParsesLatex('\\nLeftrightarrow ');
   });
 
+  test("\\nmid", function() {
+    assertParsesLatex('\\nmid ');
+  });
+
   test('\\textcolor', function() {
     assertParsesLatex('\\textcolor{blue}{8}', '\\textcolor{blue}{8}');
   });
