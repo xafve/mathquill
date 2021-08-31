@@ -753,7 +753,8 @@ function bindCharBracketPair(open, ctrlSeq) {
   CharCmds[open] = bind(Bracket, L, open, close, ctrlSeq, end);
   CharCmds[close] = bind(Bracket, R, open, close, ctrlSeq, end);
 }
-bindCharBracketPair('(');
+// disabling binding of (): it prevents writing some interval definitions, e.g. (3, 5]
+//bindCharBracketPair('(');
 // disabling binding of []: it prevents writing open interval definitions, e.g [-5, 5[
 //bindCharBracketPair('[');
 bindCharBracketPair('{', '\\{');
